@@ -1,0 +1,81 @@
+{
+    "entryCategories":[
+        {
+          "id":1,
+          "name": "salario",
+          "description": "Ganancia o Remuneración obtenido por un Trabajo Fijo o Constante. Su calculo puede estar basado en horas o días y su pago puede ser quincenal o mensual. El Salario es el Total realmente recibido, descontando Seguro Social, Días no trabajados, entre otros."
+        },
+        {
+          "id":2,
+          "name": "honorarios",
+          "description": "Ganancia o Remuneración obtenido por un Trabajo por tiempo determinado."
+        },
+        {
+          "id":3,
+          "name": "extras",
+          "description": "Ganancia obtenida por un Negocio exporádico."
+        },
+        {
+          "id":4,
+          "name": "regalos",
+          "description": "Presentes o regalos recibidos de valor o en efectivo"
+        },
+        {
+          "id":5,
+          "name": "prestamos o adelantos",
+          "description": "Dinero recibido que deberá ser pagado mas adelante."
+        },
+        {
+          "id":6,
+          "name": "otros ingresos",
+          "description": "Cualquier otro Ingreso que no pueda ser relacinado con las Categorías anteriores."
+        }
+    ],
+    "exitCategories":[
+        {
+          "id":1,
+          "name": "comidas y bebidas",
+          "description": "Gastos realizados en Restaurantes, compras en el supermercado, aperitivos, etc."
+        },
+        {
+          "id":2,
+          "name": "servicios",
+          "description": "Pagos realizados a Servicios como Agua, Luz, Gas, Aseo, entre otros."
+        },
+        {
+          "id":3,
+          "name": "salud y estética",
+          "description": "Compra de Medicinas, Consultas Médicas, Peluquería, etc."
+        },
+        {
+          "id":4,
+          "name": "regalos",
+          "description": "Gastos realizados en presentes o regalos"
+        },
+        {
+          "id":5,
+          "name": "educación",
+          "description": "Pagos por estudios Universitarios, Cursos, Seminarios, entre otros."
+        },
+        {
+          "id":6,
+          "name": "recreación",
+          "description": "Gastos hechos en salidas como Cine, Obra de Teatro, Conciertos, etc."
+        },
+        {
+          "id":7,
+          "name": "automóvil y/o transporte",
+          "description": "Gastos realizados al automóvil como Gasolina, Repuestos o también gastos de Transporte como Autobús, Taxi, etc."
+        },
+        {
+          "id":8,
+          "name": "prestamos realizados",
+          "description": "Prestamos que realizamos a otra persona y que en un determinado momento deberán ser retribuidos."
+        },
+        {
+          "id":9,
+          "name": "otros egresos",
+          "description": "Cualquier otro Egreso que no pueda ser relacinado con las Categorías anteriores."
+        }
+    ]
+}
