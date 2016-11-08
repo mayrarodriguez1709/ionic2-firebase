@@ -1,22 +1,45 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 
-/*
-  Generated class for the EntryCategories page.
+import { HttpService } from '../../providers/http.service';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-entry-categories',
-  templateUrl: 'entry-categories.html'
+  templateUrl: 'entry-categories.html',
+  providers: [HttpService]
 })
 export class EntryCategoriesPage {
 
-  constructor(public navCtrl: NavController) {}
+  public entryCategories: any;
+
+  constructor(
+      public navCtrl: NavController,
+      public platform: Platform,
+      private http: HttpService) {
+      
+      this.platform.ready().then(() => {        
+        this.getEntryCategories();      
+      });
+  }
+
 
   ionViewDidLoad() {
     console.log('Hello EntryCategoriesPage Page');
   }
 
+  getEntryCategories(){
+    let getEntryCategoriesUrl = 'entryCategories';
+    this.http.getRequest(getEntryCategoriesUrl)
+    .then(
+        res => this.showEntryCategories(res)        
+    )
+    .catch(
+        error => console.log(error)
+    ); 
+  }
+
+  showEntryCategories(res){
+    this.entryCategories = res;
+    console.log(this.entryCategories)
+  }
 }

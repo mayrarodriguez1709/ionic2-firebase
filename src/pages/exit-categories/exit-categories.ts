@@ -1,22 +1,46 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
+import { HttpService } from '../../providers/http.service';
 
-/*
-  Generated class for the ExitCategories page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-exit-categories',
-  templateUrl: 'exit-categories.html'
+  templateUrl: 'exit-categories.html',
+  providers: [HttpService]
 })
 export class ExitCategoriesPage {
 
-  constructor(public navCtrl: NavController) {}
+  public exitCategories: any;
+
+  constructor(
+      public navCtrl: NavController,
+      public platform: Platform,
+      private http: HttpService) {
+      
+      this.platform.ready().then(() => {        
+        this.getExitCategories();      
+      });
+  }
+
 
   ionViewDidLoad() {
     console.log('Hello ExitCategoriesPage Page');
   }
 
+  getExitCategories(){
+    let getExitCategoriesUrl = 'exitCategories';
+    this.http.getRequest(getExitCategoriesUrl)
+    .then(
+        res => this.showExitCategories(res)        
+    )
+    .catch(
+        error => console.log(error)
+    ); 
+  }
+
+  showExitCategories(res){
+    this.exitCategories = res;
+    console.log(this.exitCategories)
+  }
+
 }
+

@@ -10,9 +10,9 @@
 <ion-content padding>
   <h3>Ingresos</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <div *ngFor="let entry of entryCategories" >
+    <h2>{{ entry.name}} </h2>
+    <p>{{ entry.description }}</p>
+  </div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

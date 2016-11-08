@@ -10,9 +10,8 @@
 <ion-content padding>
   <h3>Egresos</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div *ngFor="let exit of exitCategories" >
+    <h2>{{ exit.name}} </h2>
+    <p>{{ exit.description }}</p>
+  </div>
 </ion-content>
