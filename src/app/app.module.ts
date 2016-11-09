@@ -6,6 +6,8 @@ import { MenuPage } from '../pages/menu/menu';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { EntryCategoriesPage } from '../pages/entry-categories/entry-categories';
 import { ExitCategoriesPage } from '../pages/exit-categories/exit-categories';
+import { EntryModalPage } from '../pages/entry-modal/entry-modal';
+import { ExitModalPage } from '../pages/exit-modal/exit-modal';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ExitCategoriesPage } from '../pages/exit-categories/exit-categories';
     MenuPage,
     DashboardPage,
     EntryCategoriesPage,
-    ExitCategoriesPage
+    ExitCategoriesPage,
+    EntryModalPage,
+    ExitModalPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +30,9 @@ import { ExitCategoriesPage } from '../pages/exit-categories/exit-categories';
     MenuPage,
     DashboardPage,
     EntryCategoriesPage,
-    ExitCategoriesPage
+    ExitCategoriesPage,
+    EntryModalPage,
+    ExitModalPage
   ],
   providers: []
 })

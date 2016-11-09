@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, ModalController } from 'ionic-angular';
+
 import { HttpService } from '../../providers/http.service';
+import { ExitModalPage } from '../exit-modal/exit-modal';
 
 @Component({
   selector: 'page-exit-categories',
@@ -14,7 +16,8 @@ export class ExitCategoriesPage {
   constructor(
       public navCtrl: NavController,
       public platform: Platform,
-      private http: HttpService) {
+      private http: HttpService,
+      public modalCtrl: ModalController) {
       
       this.platform.ready().then(() => {        
         this.getExitCategories();      
@@ -40,6 +43,12 @@ export class ExitCategoriesPage {
   showExitCategories(res){
     this.exitCategories = res;
     console.log(this.exitCategories)
+  }
+
+  openModal(){
+    let exitCategories = this.exitCategories;
+    let modal = this.modalCtrl.create(ExitModalPage, { exitCategories });
+    modal.present();
   }
 
 }
