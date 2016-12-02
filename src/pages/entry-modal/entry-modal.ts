@@ -88,7 +88,6 @@ export class EntryModalPage {
     this.viewCtrl.dismiss();
   }
 
-  addEntry(){
-    console.log(this.entry)
+  addEntry(event){
   }
 }

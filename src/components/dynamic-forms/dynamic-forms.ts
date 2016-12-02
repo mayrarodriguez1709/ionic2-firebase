@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 
@@ -11,10 +11,13 @@ export class DynamicFormsComponent {
   @Input() inputs = [];
   inputsForms = [];
   form: FormGroup;
+  values = '';
 
   constructor(
     public fb: FormBuilder
-  ) {}
+  ) {
+    
+  }
 
   ngOnInit(){
     console.log(this.inputs);
@@ -30,4 +33,9 @@ export class DynamicFormsComponent {
     return this.fb.group(inputs);
   }
 
-}
+  onSubmit(){
+    this.values = JSON.stringify(this.form.value);
+    console.log(this.values)
+  }
+
+} 
