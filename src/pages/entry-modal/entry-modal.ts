@@ -88,6 +88,7 @@ export class EntryModalPage {
     this.viewCtrl.dismiss();
   }
 
-  addEntry(event){
+  save(object) {
+      console.log("Sending entry to backend")
   }
 }

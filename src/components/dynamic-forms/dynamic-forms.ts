@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 
@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class DynamicFormsComponent {
 
   @Input() inputs = [];
+  @Output('send') submitted: EventEmitter<any> = new EventEmitter();
   inputsForms = [];
   form: FormGroup;
   values = '';
@@ -35,6 +36,7 @@ export class DynamicFormsComponent {
 
   onSubmit(){
     this.values = JSON.stringify(this.form.value);
+    this.submitted.emit(this.form.value);
     console.log(this.values)
   }
 
