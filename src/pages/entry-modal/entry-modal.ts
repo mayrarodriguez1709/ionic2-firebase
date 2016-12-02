@@ -16,10 +16,11 @@ export class EntryModalPage {
     public params: NavParams) {
     
     this.entryCategories = params.get('entryCategories');
-    //console.log(this.entryCategories)
-
     this.entry = {
-      date: "12-05-2016"
+      idCategory: 1,
+      amount : 0,
+      date : null,
+      description: ""
     }
   }
 
@@ -29,5 +30,9 @@ export class EntryModalPage {
 
   dismiss(){
     this.viewCtrl.dismiss();
+  }
+
+  addEntry(){
+    console.log(this.entry)
   }
 }

@@ -13,29 +13,31 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <!--<ion-list>
     <ion-list>
       <ion-item>
         <ion-label>Categoría</ion-label>
         <ion-select [(ngModel)]="cat">
-          <ion-option *ngFor="let entryCat of entryCategories" [value]="entryCat.id" > {{ entryCat.name }} </ion-option>
+          <ion-option [(ngModel)]="entry.idCategory" *ngFor="let entryCat of entryCategories" [value]="entryCat.id" > {{ entryCat.name }} </ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
      <ion-item>
       <ion-label>Monto</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="entry.amount"  type="text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Fecha</ion-label>
-      <ion-datetime displayFormat="D-M-YYYY" pickerFormat="D M YYYY" [(ngModel)]="entry.date"></ion-datetime>
+      <ion-datetime [(ngModel)]="entry.date"  displayFormat="D-M-YYYY" pickerFormat="D M YYYY"></ion-datetime>
     </ion-item>
 
     <ion-item>
       <ion-label>Descripción</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="entry.description"  type="text"></ion-input>
     </ion-item>
-  </ion-list>
+
+    <button ion-button block (click)="addEntry()"> Agregar</button>
+  </ion-list>-->
 </ion-content>

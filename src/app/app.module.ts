@@ -8,6 +8,7 @@ import { EntryCategoriesPage } from '../pages/entry-categories/entry-categories'
 import { ExitCategoriesPage } from '../pages/exit-categories/exit-categories';
 import { EntryModalPage } from '../pages/entry-modal/entry-modal';
 import { ExitModalPage } from '../pages/exit-modal/exit-modal';
+import { DynamicFormsComponent } from '../components/dynamic-forms/dynamic-forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExitModalPage } from '../pages/exit-modal/exit-modal';
     EntryCategoriesPage,
     ExitCategoriesPage,
     EntryModalPage,
-    ExitModalPage
+    ExitModalPage,
+    DynamicFormsComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,7 +34,8 @@ import { ExitModalPage } from '../pages/exit-modal/exit-modal';
     EntryCategoriesPage,
     ExitCategoriesPage,
     EntryModalPage,
-    ExitModalPage
+    ExitModalPage,
+    DynamicFormsComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

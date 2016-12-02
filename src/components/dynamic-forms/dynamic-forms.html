@@ -1,0 +1,64 @@
+<form novalidate [formGroup]="form">
+  <ion-list>
+    <div *ngFor="let input of inputsForms">
+      
+      <!-- Input Text -->
+      <ion-item *ngIf="input.type == 'text'">
+        <ion-label stacked text-uppercase>{{ input.label }}</ion-label>
+        <ion-input type="text" placeholder="{{ input.placeholder }}" [formControlName]="input.name"></ion-input>
+      </ion-item>
+
+      <!-- Input Password -->
+      <ion-item *ngIf="input.type == 'password'">
+        <ion-label>{{ input.label }}</ion-label>
+        <ion-input type="password" [formControlName]="input.name"></ion-input>
+      </ion-item>
+
+      <!-- Input Text For Address-->
+      <ion-item *ngIf="input.type == 'text-address'">
+        <ion-label stacked text-uppercase>{{ input.label }}</ion-label>
+        <ion-input type="text" placeholder="{{ input.placeholder }}" (click)="goToGoogleMaps()" [formControlName]="input.name"></ion-input>
+      </ion-item>
+
+      <!-- Hide Input -->
+      <ion-item *ngIf="input.type == 'hidden'">
+        <ion-input type="hidden" [formControlName]="input.name"></ion-input>
+      </ion-item>
+
+      <!-- select -->
+      <ion-item *ngIf="input.type == 'select'">
+        <ion-label text-uppercase>{{ input.label }}</ion-label>
+        <ion-select [formControlName]="input.name">
+          <ion-option [value]="option.value" *ngFor="let option of input.options">{{ option.label }}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Radio -->
+      <ion-list radio-group *ngIf="input.type == 'radio'" [formControlName]="input.name">
+        <ion-list-header>
+          {{ input.label }}
+        </ion-list-header>
+        <ion-item *ngFor="let option of input.options">
+          <ion-label>{{ option.label }}</ion-label>
+          <ion-radio [value]="option.value"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+      <!-- Checkbox -->
+      <ion-list *ngIf="input.type == 'checkbox'" >
+        <ion-item *ngFor="let option of input.options" >
+          <ion-label>{{ option.label }}</ion-label>
+          <ion-checkbox [value]="option.value" [formControlName]="input.name" [checked]="option.checked" [disabled]="option.disabled"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+
+      <!-- Date -->
+      <ion-list *ngIf="input.type == 'date'">
+        <ion-item>
+          <ion-label text-uppercase>{{ input.label }}</ion-label>        
+          <ion-datetime [formControlName]="input.name" displayFormat="MM/DD/YYYY" [(ngModel)]="taskDate"></ion-datetime>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-list>
+</form>
