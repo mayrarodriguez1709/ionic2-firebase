@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, Platform, ModalController } from 'ionic-angular';
 
-import { HttpService } from '../../providers/http.service';
+//import { HttpService } from '../../providers/http.service';
+import { EntryCategoriesService } from '../../providers/entry-categories/entry-categories.service'
 import { EntryModalPage } from '../entry-modal/entry-modal';
 
 @Component({
   selector: 'page-entry-categories',
   templateUrl: 'entry-categories.html',
-  providers: [HttpService]
+  providers: [ EntryCategoriesService ]
 })
 export class EntryCategoriesPage {
 
@@ -16,7 +17,7 @@ export class EntryCategoriesPage {
   constructor(
       public navCtrl: NavController,
       public platform: Platform,
-      private http: HttpService,
+      private httpEntryCategories: EntryCategoriesService,
       public modalCtrl: ModalController) {
       
       this.platform.ready().then(() => {        
@@ -30,8 +31,7 @@ export class EntryCategoriesPage {
   }
 
   getEntryCategories(){
-    let getEntryCategoriesUrl = 'entryCategories';
-    this.http.getRequest(getEntryCategoriesUrl)
+    this.httpEntryCategories.getEntryCategories()
     .then(
         res => this.showEntryCategories(res)        
     )
@@ -46,8 +46,9 @@ export class EntryCategoriesPage {
   }
 
   openModal(){
-    let entryCategories = this.entryCategories;
-    let modal = this.modalCtrl.create(EntryModalPage, { entryCategories });
+    //let entryCategories = this.entryCategories;
+    //let modal = this.modalCtrl.create(EntryModalPage, { entryCategories });
+    let modal = this.modalCtrl.create(EntryModalPage);
     modal.present();
   }
 }

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, Platform, ModalController } from 'ionic-angular';
 
-import { HttpService } from '../../providers/http.service';
+import { ExitCategoriesService } from '../../providers/exit-categories/exit-categories.service';
 import { ExitModalPage } from '../exit-modal/exit-modal';
 
 @Component({
   selector: 'page-exit-categories',
   templateUrl: 'exit-categories.html',
-  providers: [HttpService]
+  providers: [ ExitCategoriesService ]
 })
 export class ExitCategoriesPage {
 
@@ -16,7 +16,7 @@ export class ExitCategoriesPage {
   constructor(
       public navCtrl: NavController,
       public platform: Platform,
-      private http: HttpService,
+      private httpExitCategories: ExitCategoriesService,
       public modalCtrl: ModalController) {
       
       this.platform.ready().then(() => {        
@@ -30,8 +30,7 @@ export class ExitCategoriesPage {
   }
 
   getExitCategories(){
-    let getExitCategoriesUrl = 'exitCategories';
-    this.http.getRequest(getExitCategoriesUrl)
+    this.httpExitCategories.getExitCategories()
     .then(
         res => this.showExitCategories(res)        
     )

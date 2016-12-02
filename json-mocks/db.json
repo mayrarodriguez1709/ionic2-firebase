@@ -77,5 +77,121 @@
           "name": "otros egresos",
           "description": "Cualquier otro Egreso que no pueda ser relacinado con las Categorías anteriores."
         }
-    ]
+    ],
+    "forms":{
+      "entryForm": [
+        {
+          "name": "categories",
+          "type": "select",
+          "label": "Categorías",
+          "options": [
+            {
+              "value":1,
+              "label": "Salario"
+            },
+            {
+              "value":2,
+              "label": "Honorarios"
+            },
+            {
+              "value":3,
+              "label": "Extras"
+            },
+            {
+              "value":4,
+              "label": "Regalos"
+            },
+            {
+              "value":5,
+              "label": "Prestamos o adelantos"
+            },
+            {
+              "value":6,
+              "label": "Otros ingresos"
+            }
+          ]
+        },
+        {
+          "name": "amount",
+          "type": "text",
+          "value": "",
+          "label": "Monto"
+        },
+        {
+          "name": "date",
+          "type": "date",
+          "value": "",
+          "label": "Fecha"
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "value": "",
+          "label": "Descripción"
+        }
+      ],
+      "exitForm": [
+        {
+          "name": "categories",
+          "type": "select",
+          "label": "Categorías",
+          "options": [
+            {
+              "value":1,
+              "label": "comidas y bebidas"
+            },
+            {
+              "value":2,
+              "label": "servicios"
+            },
+            {
+              "value":3,
+              "label": "salud y estética"
+            },
+            {
+              "value":4,
+              "label": "regalos"
+            },
+            {
+              "value":5,
+              "label": "educación"
+            },
+            {
+              "value":6,
+              "label": "recreación"
+            },
+            {
+              "value":7,
+              "label": "automóvil y/o transporte"
+            },
+            {
+              "value":8,
+              "label": "prestamos realizados"
+            },
+            {
+              "value":9,
+              "label": "otros egresos"
+            }
+          ]
+        },
+        {
+          "name": "amount",
+          "type": "text",
+          "value": "",
+          "label": "Monto"
+        },
+        {
+          "name": "date",
+          "type": "date",
+          "value": "",
+          "label": "Fecha"
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "value": "",
+          "label": "Descripción"
+        }
+      ]
+    }
 }

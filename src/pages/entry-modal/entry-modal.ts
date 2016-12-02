@@ -17,8 +17,9 @@ export class EntryModalPage {
     public viewCtrl: ViewController,
     public params: NavParams) {
     
-    this.entryCategories = params.get('entryCategories');
-    console.log(this.entryCategories)
+    //this.entryCategories = params.get('entryCategories');
+    console.log("this.entryCategories")
+    //console.log(this.entryCategories)
 
     this.entry = {
       idCategory: 1,
