@@ -45,12 +45,12 @@
       </ion-list>
 
       <!-- Checkbox -->
-      <ion-list *ngIf="input.type == 'checkbox'" >
+    <!--<ion-list *ngIf="input.type == 'checkbox'" >
         <ion-item *ngFor="let option of input.options" >
           <ion-label>{{ option.label }}</ion-label>
           <ion-checkbox [value]="option.value" [formControlName]="input.name" [checked]="option.checked" [disabled]="option.disabled"></ion-checkbox>
         </ion-item>
-      </ion-list>
+      </ion-list>-->
 
       <!-- Date -->
       <ion-list *ngIf="input.type == 'date'">

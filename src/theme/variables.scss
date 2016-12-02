@@ -68,3 +68,10 @@ $colors: (
 
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
+
+
+//Custom Styles
+
+[text-capitalize]{
+  text-transform: capitalize
+}
