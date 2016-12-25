@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="dark">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,14 +7,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-fab top right edge>
     <button ion-fab mini (click)="openModal()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
-  <div *ngFor="let entry of entryCategories" >
-    <h2>{{ entry.name}} </h2>
-    <p>{{ entry.description }}</p>
-  </div>
+  <ul>
+    <li *ngFor="let entry of entryCategories">
+      <div class="img-container">
+        <img src="{{ entry.img}}" class="gray-filter" alt="">
+      </div>
+      
+      <div class="text-container">
+        <h2>{{ entry.name}} </h2>
+      </div>
+     
+      <!--
+        <img src="{{ entry.img}}" alt="">
+         <h2>{{ entry.name}} </h2>
+         <p>{{ entry.description }}</p>-->
+    </li>
+  </ul>
 
 </ion-content>

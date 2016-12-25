@@ -3,32 +3,38 @@
         {
           "id":1,
           "name": "salario",
-          "description": "Ganancia o Remuneración obtenido por un Trabajo Fijo o Constante. Su calculo puede estar basado en horas o días y su pago puede ser quincenal o mensual. El Salario es el Total realmente recibido, descontando Seguro Social, Días no trabajados, entre otros."
+          "description": "Ganancia o Remuneración obtenido por un Trabajo Fijo o Constante. Su calculo puede estar basado en horas o días y su pago puede ser quincenal o mensual. El Salario es el Total realmente recibido, descontando Seguro Social, Días no trabajados, entre otros.",
+          "img":"https://cdn.pixabay.com/photo/2016/04/25/23/53/euro-1353420_960_720.jpg"
         },
         {
           "id":2,
           "name": "honorarios",
-          "description": "Ganancia o Remuneración obtenido por un Trabajo por tiempo determinado."
+          "description": "Ganancia o Remuneración obtenido por un Trabajo por tiempo determinado.",
+          "img":"https://cdn.pixabay.com/photo/2016/10/21/05/33/notebook-1757220_960_720.jpg"
         },
         {
           "id":3,
           "name": "extras",
-          "description": "Ganancia obtenida por un Negocio exporádico."
+          "description": "Ganancia obtenida por un Negocio exporádico.",
+          "img":"https://cdn.pixabay.com/photo/2014/10/11/22/20/guitar-case-485112_960_720.jpg"
         },
         {
           "id":4,
           "name": "regalos",
-          "description": "Presentes o regalos recibidos de valor o en efectivo"
+          "description": "Presentes o regalos recibidos de valor o en efectivo",
+          "img": "https://cdn.pixabay.com/photo/2014/12/19/02/15/loop-572859_960_720.jpg"
         },
         {
           "id":5,
           "name": "prestamos o adelantos",
-          "description": "Dinero recibido que deberá ser pagado mas adelante."
+          "description": "Dinero recibido que deberá ser pagado mas adelante.",
+          "img": "https://cdn.pixabay.com/photo/2016/05/21/21/31/time-is-money-1407479_960_720.jpg"
         },
         {
           "id":6,
           "name": "otros ingresos",
-          "description": "Cualquier otro Ingreso que no pueda ser relacinado con las Categorías anteriores."
+          "description": "Cualquier otro Ingreso que no pueda ser relacinado con las Categorías anteriores.",
+          "img": "https://cdn.pixabay.com/photo/2015/10/23/15/14/roulette-1003120_960_720.jpg"
         }
     ],
     "exitCategories":[
